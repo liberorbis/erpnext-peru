@@ -7,6 +7,22 @@ app_color = "blue"
 app_email = "erpnext@liberorbis.com"
 app_version = "0.0.1"
 
+
+fixtures = [
+	"Custom Field",
+	"Custom Script"
+]
+doc_events = {
+     	"Customer": {
+		"validate": "erpnext_peru_base.erpnext_peru_base.validate_vat.validate_vat",
+        },
+	"Sales Invoice": {
+		"autoname": "base_peru.base_peru.doctype.sales_invoice.sales_invoice.autoname",
+		"get_default_naming_series": "base_peru.base_peru.doctype.sales_invoice.sales_invoice.get_default_naming_series",
+		"preserve_naming_series_options_in_property_setter": "base_peru.base_peru.doctype.sales_invoice.sales_invoice.preserve_naming_series_options_in_property_setter"
+	}
+
+}
 # Includes in <head>
 # ------------------
 
